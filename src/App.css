@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #2b283a;
+    font-size: clamp(0.5rem, 0.6rem + 1.5vw, 1.5rem);
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    background-color: #55b4c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar__logo {
+    display: inline-block;
+    margin-inline-end: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card-list {
+    padding: 15px 20px 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item__wrap {
+    margin-block-start: 25px;
+}
+
+.location__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.item__icon {
+    width: 15px;
+    margin-inline-end: 7px;
+}
+
+.item__location {
+    letter-spacing: 0.5rem;
+}
+
+.item__location {
+    margin: 0;
+}
+
+.item__link {
+    letter-spacing: normal;
+    display: inline-block;
+    color: #918e9b;
+    margin-inline-start: 10px;
+    font-size: 0.8rem;
+}
+
+.item__date {
+    margin-block-end: 15px;
+    font-weight: 700;
+}
+
+/*Carousel*/
+.carousel .slide {
+    list-style: none;
+}
+
+.carousel-status,
+.control-arrow,
+.carousel .thumbs-wrapper {
+    display: none;
+}
+
+.carousel ul.control-dots .dot {
+    margin: 0 15px;
+    width: 12px;
+    height: 12px;
+}
+
+/*Adaptive*/
+@media screen and (max-width: 450px) {
+    .item__img {
+        max-width: 320px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .item {
+        flex-direction: row;
+    }
+
+    .item__wrap {
+        margin-block-start: 0px;
+        margin-inline-start: 15px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card-list {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .item {
+        flex-direction: column;
+    }
+
+    .item__wrap {
+        margin-block-start: 20px;
+        margin-inline-start: 0px;
+    }
+
+    .item__img {
+        max-width: 950px;
+    }
+    .control-arrow {
+        display: block;
+        padding: 15px;
+    }
 }
