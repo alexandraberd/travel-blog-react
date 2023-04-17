@@ -10,14 +10,7 @@ function CardList() {
                     <Card
                         key={item.id.toString()}
                         item={item}
-                        // title={item.title}
-                        // location={item.location}
-                        // googleMapsUrl={item.googleMapsUrl}
-                        // startDate={item.startDate}
-                        // endDate={item.endDate}
-                        // description={item.description}
-                        // imageLarge={item.imageLarge}
-                        // imageSmall={item.imageSmall}
+                        
                     />
                 );
             })}
